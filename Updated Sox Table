@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+th, td {
+    border: 2px solid black;
+    width: 80%;
+    color: solid-black;
+    background-color: white;
+}
+.odd{
+   background-color: silver;
+}
+table.clean{
+	empty-cells: hide;
+}
+</style>
+</head>
+<body>
+
+<h2>Chicago White Sox Batting Stats:</h2>
+
+<button id="buttonName" type="button" onclick="expand()">More stats</button>
+
+
+
+<table class="clean" align = "center">
+  <tr>
+    <th>Firstname</th>
+    <th>Average</th>
+    <th>On Base %</th>
+    <th id="HR"></th>
+    <th id="RBI"></th>
+    <th id="SLG"></th>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/33095/jose-abreu">Jose Abreu</a></td>
+    <td class = "odd">.304</td>
+    <td class = "odd">.354</td>
+    <td class = "odd" id="jaHR"></td>
+    <td class = "odd" id="jaRBI"></td>
+    <td class = "odd" id="jaSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/33696/carlos-rodon">Carlos Rodon</a></td>
+    <td>.333</td>
+    <td>.333</td>
+    <td id="crHR"></td>
+    <td id="crRBI"></td>
+    <td id="crSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/30729/avisail-garcia">avisail Garcia</a></td>
+    <td class = "odd">.330</td>
+    <td class = "odd">.338</td>
+    <td class = "odd" id="agHR"></td>
+    <td class = "odd" id="agRBI"></td>
+    <td class = "odd" id="agSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/6347/melky-cabrera">Melky Cabrera</a></td>
+    <td>.295</td>
+    <td>.336</td>
+    <td id="mcHR"></td>
+    <td id="mcRBI"></td>
+    <td id="mcSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/31133/rob-brantly">Rob Brantley</a></td>
+    <td class = "odd">.290</td>
+    <td class = "odd">.389</td>
+    <td class = "odd" id="rbHR"></td>
+    <td class = "odd" id="rbRBI"></td>
+    <td class = "odd" id="rbSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/32618/kevan-smith">Kevan Smith</a></td>
+    <td>.283</td>
+    <td>.309</td>
+    <td id="ksHR"></td>
+    <td id="ksRBI"></td>
+    <td id="ksSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/34254/omar-narvaez">Omar Naveus</a></td>
+    <td class = "odd">.277</td>
+    <td class = "odd">.373</td>
+    <td class = "odd" id="onHR"></td>
+    <td class = "odd" id="onRBI"></td>
+    <td class = "odd" id="onSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/30664/leury-garcia">leury Garcia</a></td>
+    <td>.270</td>
+    <td>.316</td>
+    <td id="lgHR"></td>
+    <td id="lgRBI"></td>
+    <td id="lgSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/32264/yolmer-sanchez">Yolmar Sanchez</a></td>
+    <td class = "odd">.267</td>
+    <td class = "odd">.319</td>
+    <td class = "odd" id="ysHR"></td>
+    <td class = "odd" id="ysRBI"></td>
+    <td class = "odd" id="ysSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/32121/nicky-delmonico">Nicky Delminico</a></td>
+    <td>.262</td>
+    <td>.373</td>
+    <td id="ndHR"></td>
+    <td id="ndRBI"></td>
+    <td id="ndSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/33184/tim-anderson">Tim Anderson</a></td>
+    <td class = "odd">.257</td>
+    <td class = "odd">.267</td>
+    <td class = "odd" id="taHR"></td>
+    <td class = "odd" id="taRBI"></td>
+    <td class = "odd" id="taSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/32335/willy-garcia">Willy Garcia</a></td>
+    <td>.238</td>
+    <td>.305</td>
+    <td id="wgHR"></td>
+    <td id="wgRBI"></td>
+    <td id="wgSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/32560/alen-hanson">Alen Hanson</a></td>
+    <td class = "odd">.231</td>
+    <td class = "odd">.276</td>
+    <td class = "odd" id="ahHR"></td>
+    <td class = "odd" id="ahRBI"></td>
+    <td class = "odd" id="ahSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/33984/yoan-moncada">yoan Moncada</a></td>
+    <td>.231</td>
+    <td>.338</td>
+    <td id="ymHR"></td>
+    <td id="ymRBI"></td>
+    <td id="ymSLG"></td>
+  </tr>
+  <tr>
+    <td class = "odd"><a href="http://www.espn.com/mlb/player/_/id/30004/todd-frazier">todd Frazier</a></td>
+    <td class = "odd">.207</td>
+    <td class = "odd">.328</td>
+    <td class = "odd" id="tfHR"></td>
+    <td class = "odd" id="tfRBI"></td>
+    <td class = "odd" id="tfSLG"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.espn.com/mlb/player/_/id/31145/matt-davidson">matt davidson</a></td>
+    <td>.220</td>
+    <td>.260</td>
+    <td id="mdHR"></td>
+    <td id="mdRBI"></td>
+    <td id="mdSLG"></td>
+  </tr>
+</table>
+
+
+<script>
+
+var toggle = false;
+var th = ["","","","","","",""]
+var st = ["","","","","","",""]
+function expand(){
+
+	th[0] = "";th[1] = "HR";th[2] = "RBI";th[3] = "SLG";
+    st[0] = "33";st[1] = "102";st[2] = ".552";
+    st[3] = "0";st[4] = "2"; st[5] = ".506";
+    st[6] = "18";st[7] = "80"; st[8] = ".436";
+    st[9] = "13";st[10] = "56"; st[11] = ".436";
+    st[12] = "2";st[13] = "5"; st[14] = ".516";
+    st[15] = "4";st[16] = "14"; st[17] = ".388";
+    st[18] = "2";st[19] = "14"; st[20] = ".340";
+    //leury garcia
+    st[21] = "9";st[22] = "33"; st[23] = ".423";
+    st[24] = "12";st[25] = "59"; st[26] = ".413";
+    st[27] = "9";st[28] = "23"; st[29] = ".482";
+    st[30] = "17";st[31] = "56"; st[32] = ".482";
+    st[33] = "2";st[34] = "12"; st[35] = ".402";
+    st[36] = "4";st[37] = "10"; st[38] = ".400";
+    st[39] = "8";st[40] = "22"; st[41] = ".	375";
+    st[42] = "16";st[43] = "44"; st[44] = ".432";
+    st[45] = "26";st[46] = "68"; st[47] = ".452";
+ 
+ if(toggle == false){
+    document.getElementById("HR").innerHTML = th[1];
+    document.getElementById("RBI").innerHTML = th[2];
+    document.getElementById("SLG").innerHTML = th[3];
+    document.getElementById("jaHR").innerHTML = st[0];
+    document.getElementById("jaRBI").innerHTML = st[1];
+    document.getElementById("jaSLG").innerHTML = st[2];
+    document.getElementById("crHR").innerHTML = st[3];
+    document.getElementById("crRBI").innerHTML = st[4];
+    document.getElementById("crSLG").innerHTML = st[5];
+    document.getElementById("agHR").innerHTML = st[6];
+    document.getElementById("agRBI").innerHTML = st[7];
+    document.getElementById("agSLG").innerHTML = st[8];
+    document.getElementById("mcHR").innerHTML = st[9];
+    document.getElementById("mcRBI").innerHTML = st[10];
+    document.getElementById("mcSLG").innerHTML = st[11];
+    document.getElementById("rbHR").innerHTML = st[12];
+    document.getElementById("rbRBI").innerHTML = st[13];
+    document.getElementById("rbSLG").innerHTML = st[14];
+    document.getElementById("ksHR").innerHTML = st[15];
+    document.getElementById("ksRBI").innerHTML = st[16];
+    document.getElementById("ksSLG").innerHTML = st[17];
+    document.getElementById("onHR").innerHTML = st[18];
+    document.getElementById("onRBI").innerHTML = st[19];
+    document.getElementById("onSLG").innerHTML = st[20];
+    document.getElementById("lgHR").innerHTML = st[21];
+    document.getElementById("lgRBI").innerHTML = st[22];
+    document.getElementById("lgSLG").innerHTML = st[23];
+    document.getElementById("ysHR").innerHTML = st[24];
+    document.getElementById("ysRBI").innerHTML = st[25];
+    document.getElementById("ysSLG").innerHTML = st[26];
+    document.getElementById("ndHR").innerHTML = st[27];
+    document.getElementById("ndRBI").innerHTML = st[28];
+    document.getElementById("ndSLG").innerHTML = st[29];
+    document.getElementById("taHR").innerHTML = st[30];
+    document.getElementById("taRBI").innerHTML = st[31];
+    document.getElementById("taSLG").innerHTML = st[32];
+    document.getElementById("wgHR").innerHTML = st[33];
+    document.getElementById("wgRBI").innerHTML = st[34];
+    document.getElementById("wgSLG").innerHTML = st[35];
+    document.getElementById("ahHR").innerHTML = st[36];
+    document.getElementById("ahRBI").innerHTML = st[37];
+    document.getElementById("ahSLG").innerHTML = st[38];
+    document.getElementById("ymHR").innerHTML = st[39];
+    document.getElementById("ymRBI").innerHTML = st[40];
+    document.getElementById("ymSLG").innerHTML = st[41];
+    document.getElementById("tfHR").innerHTML = st[42];
+    document.getElementById("tfRBI").innerHTML = st[43];
+    document.getElementById("tfSLG").innerHTML = st[44];
+    document.getElementById("mdHR").innerHTML = st[45];
+    document.getElementById("mdRBI").innerHTML = st[46];
+    document.getElementById("mdSLG").innerHTML = st[47];
+	document.getElementById("buttonName").innerHTML = "less stats";
+    toggle = true;
+}else{
+
+    document.getElementById("HR").innerHTML = th[0];
+    document.getElementById("RBI").innerHTML = th[0];
+    document.getElementById("SLG").innerHTML = th[0];
+    document.getElementById("jaHR").innerHTML = th[0];
+    document.getElementById("jaRBI").innerHTML = th[0];
+    document.getElementById("jaSLG").innerHTML = th[0];
+	document.getElementById("crHR").innerHTML = th[0];
+    document.getElementById("crRBI").innerHTML = th[0];
+    document.getElementById("crSLG").innerHTML = th[0];
+    document.getElementById("agHR").innerHTML = th[0];
+    document.getElementById("agRBI").innerHTML = th[0];
+    document.getElementById("agSLG").innerHTML = th[0];
+    document.getElementById("mcHR").innerHTML = th[0];
+    document.getElementById("mcRBI").innerHTML = th[0];
+    document.getElementById("mcSLG").innerHTML = th[0];
+    document.getElementById("rbHR").innerHTML = th[0];
+    document.getElementById("rbRBI").innerHTML = th[0];
+    document.getElementById("rbSLG").innerHTML = th[0];
+    document.getElementById("ksRBI").innerHTML = th[0];
+    document.getElementById("ksSLG").innerHTML = th[0];
+    document.getElementById("ksHR").innerHTML = th[0];
+    document.getElementById("onRBI").innerHTML = th[0];
+    document.getElementById("onSLG").innerHTML = th[0];
+    document.getElementById("onHR").innerHTML = th[0];
+    document.getElementById("lgRBI").innerHTML = th[0];
+    document.getElementById("lgSLG").innerHTML = th[0];
+    document.getElementById("lgHR").innerHTML = th[0];
+    document.getElementById("lgRBI").innerHTML = th[0];
+    document.getElementById("ysSLG").innerHTML = th[0];
+    document.getElementById("ysHR").innerHTML = th[0];
+    document.getElementById("ysRBI").innerHTML = th[0];
+    document.getElementById("ysSLG").innerHTML = th[0];
+    document.getElementById("ndHR").innerHTML = th[0];
+    document.getElementById("ndRBI").innerHTML = th[0];
+    document.getElementById("ndSLG").innerHTML = th[0];
+    document.getElementById("taHR").innerHTML = th[0];
+    document.getElementById("taRBI").innerHTML = th[0];
+    document.getElementById("taSLG").innerHTML = th[0];
+    document.getElementById("wgHR").innerHTML = th[0];
+    document.getElementById("wgRBI").innerHTML = th[0];
+    document.getElementById("wgSLG").innerHTML = th[0];
+    document.getElementById("ahHR").innerHTML = th[0];
+    document.getElementById("ahRBI").innerHTML = th[0];
+    document.getElementById("ahSLG").innerHTML = th[0];
+    document.getElementById("ymHR").innerHTML = th[0];
+    document.getElementById("ymRBI").innerHTML = th[0];
+    document.getElementById("ymSLG").innerHTML = th[0];
+    document.getElementById("tfHR").innerHTML = th[0];
+    document.getElementById("tfRBI").innerHTML = th[0];
+    document.getElementById("tfSLG").innerHTML = th[0];
+    document.getElementById("mdHR").innerHTML = th[0];
+    document.getElementById("mdRBI").innerHTML = th[0];
+    document.getElementById("mdSLG").innerHTML = th[0];
+    document.getElementById("buttonName").innerHTML = "more stats";
+    toggle = false;
+    
+    }
+}
+</script>
+</body>
+</html>
